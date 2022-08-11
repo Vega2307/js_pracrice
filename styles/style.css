@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 
+
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -9,6 +14,24 @@ body {
     margin-right: auto;
     max-width: 1440px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.body_dark {
+    background-color: black;
+}
+
+.body_light {
+    background-color: white;
+
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -32,17 +55,12 @@ a {
     color: rgb(61, 79, 136);
 }
 
-.wrapper {
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
 .container {
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
+}
+
+.header {
+    flex: 0 0 auto;
 }
 
 .header a::after {
@@ -65,6 +83,8 @@ a {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .menu_popup_icon:hover {
@@ -196,3 +216,81 @@ a {
   .header__switch_slider.header__switch_round:before {
     border-radius: 50%;
   }
+
+.main {
+    flex: 1 1 auto;
+}
+
+.main_dark {
+    background-color: rgb(44, 44, 44);
+}
+
+.main_light {
+    background-color: rgb(252, 252, 252);
+}
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer__logo_img img {
+    width: 60px;
+    color: black;
+    margin-top: 10px;
+  }
+
+  @media(max-width: 550px) {
+    .footer__logo_img img {
+        width: 40px;
+    }
+  }
+
+.footer__text {
+    font-size: 16px;
+    text-align: center;
+    align-self: center;
+    line-height: 5px;
+    font-style: italic;
+}
+
+@media(max-width: 550px) {
+    .footer__text {
+        font-size: 12px;
+    }
+  }
+
+.footer__social {
+    display: flex;
+    align-content: center;
+}
+
+.footer__social_ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 0%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.footer__social_ul li {
+    margin-right: 20px;
+    align-self: center;
+}
+
+@media(max-width: 550px) {
+    .footer__social_ul li {
+        margin-right: 5px;
+    }
+    .footer__social_ul li img {
+        width: 20px;
+    }
+  }
+
+.footer__social_ul li:last-of-type {
+    margin-right: 0;
+}
